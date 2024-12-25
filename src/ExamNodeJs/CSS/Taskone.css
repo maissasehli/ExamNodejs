@@ -1,0 +1,75 @@
+/* Taskone.css */
+
+/* Container for the task component */
+.task-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    transition: transform 0.3s ease;
+  }
+  
+  .task-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Section styling */
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  /* Styled pre element for displaying JSON */
+  pre {
+    background-color: #f4f4f9;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .statistics {
+    background-color: #e9f7fe;
+    color: #333;
+  }
+  
+  .merged-map {
+    background-color: #f1f1f1;
+    color: #333;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .task-container {
+      padding: 15px;
+    }
+  
+    .header {
+      font-size: 22px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    pre {
+      font-size: 14px;
+    }
+  }
+  
