@@ -1,83 +1,111 @@
-/* TaskTwo.css */
+/* Tasktwo.css */
 
 /* General Container */
 .task-two-container {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Title Styling */
+.task-two-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.input-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add-button:hover {
+  background-color: #218838;
+}
+
+/* Button Styling */
+.sort-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+  background-color: #0056b3;
+}
+
+/* Item List Styling */
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: white;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item-value {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-two-container {
+    padding: 20px;
   }
-  
-  /* Title Styling */
-  .task-two-title {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Button Styling */
-  .sort-button {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .sort-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Item List Styling */
-  .item-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 600px;
-  }
-  
-  /* Individual Item Styling */
+
   .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px;
-    background-color: white;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .item-name {
-    font-size: 18px;
-    font-weight: bold;
-  }
-  
+
+  .item-name,
   .item-value {
-    font-size: 16px;
-    color: #555;
+    margin-bottom: 5px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .task-two-container {
-      padding: 20px;
-    }
-  
-    .item {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .item-name, .item-value {
-      margin-bottom: 5px;
-    }
-  }
-  
+}

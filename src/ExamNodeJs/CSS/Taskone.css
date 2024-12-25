@@ -1,75 +1,121 @@
-/* Taskone.css */
-
-/* Container for the task component */
+/* General Container */
 .task-container {
-    max-width: 800px;
-    margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Header Styling */
+.header {
+  font-size: clamp(24px, 5vw, 28px);
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Form Styling */
+.input-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.input-field, 
+.select-map {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus, 
+.select-map:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.add-button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+  min-width: 120px;
+}
+
+.add-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.add-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
+}
+
+.statistics, 
+.merged-map {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover Effects for Sections */
+.statistics:hover, 
+.merged-map:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .task-container {
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    transition: transform 0.3s ease;
   }
-  
-  .task-container:hover {
-    transform: scale(1.02);
+
+  .input-form {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  /* Header */
-  .header {
-    text-align: center;
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
+
+  .input-field, 
+  .select-map, 
+  .add-button {
+    width: 100%;
+    max-width: none;
   }
-  
-  /* Section styling */
-  .section {
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 20px;
-    color: #007bff;
-  }
-  
-  /* Styled pre element for displaying JSON */
-  pre {
-    background-color: #f4f4f9;
-    padding: 15px;
-    border-radius: 5px;
-    overflow-x: auto;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-  }
-  
-  .statistics {
-    background-color: #e9f7fe;
-    color: #333;
-  }
-  
+
+  .statistics, 
   .merged-map {
-    background-color: #f1f1f1;
-    color: #333;
+    padding: 10px;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 600px) {
-    .task-container {
-      padding: 15px;
-    }
-  
-    .header {
-      font-size: 22px;
-    }
-  
-    h2 {
-      font-size: 18px;
-    }
-  
-    pre {
-      font-size: 14px;
-    }
-  }
-  
+}
